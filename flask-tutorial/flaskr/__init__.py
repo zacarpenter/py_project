@@ -28,7 +28,7 @@ def create_app(test_config=None):
     @app.route('/hello')
     def hello():
         return 'Hello, World!'
-    #existing code omitted
+    # existing code omitted
     
     from . import db
     db.init_app(app)
