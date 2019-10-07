@@ -29,9 +29,11 @@ def create_app(test_config=None):
     def hello():
         return 'Hello, World!'
     # existing code omitted
-    
+
     from . import db
     db.init_app(app)
 
-    return app
+    from . import auth
+    app.register_blueprint(auth.bp)
 
+    return app
