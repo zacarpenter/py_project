@@ -30,10 +30,10 @@ def register():
             db.execute(
                 'INSERT INTO user (username, password) VALUES (?, ?)',
                 (username, generate_password_hash(password))
-            )     
+            )
             db.commit()
             return redirect(url_for('auth.login'))
-            
+
 
         flash(error)
 
@@ -62,7 +62,7 @@ def login():
 
         flash(error)
 
-    return render_template('auth/login.html') 
+    return render_template('auth/login.html')
 
 @bp.before_app_request
 def load_logged_in_user():
@@ -87,6 +87,5 @@ def login_required(view):
             return redirect(url_for('auth.login'))
 
         return view(**kwargs)
-    
-    return wrapped_view
 
+    return wrapped_view
