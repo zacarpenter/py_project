@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 venv/
 
 *.pyc
@@ -12,3 +13,6 @@ htmlcov/
 dist/
 build/
 *.egg-info/
+=======
+dontreadme.txt
+>>>>>>> 8acb07e9636ffde9ba1f1b2aa9518c254dc652de
